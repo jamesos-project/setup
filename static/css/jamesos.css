@@ -1,0 +1,30 @@
+/* JamesOS Setup */
+/* status icons: gold when a step is done (DDL's were green) */
+.vec-icon-done { filter: brightness(0) saturate(100%) invert(76%) sepia(43%) saturate(708%) hue-rotate(358deg) brightness(93%) contrast(89%); }
+.vec-ui-footer-middle span:first-child { color: #999; }
+.vec-ui-footer-middle a, .jos-tip a { color: #e2b54a; }
+/* the old "Pair with Vector" button on the done screen does nothing - the next step is v.pvic.xyz */
+#containerOtaComplete #btnDiscoverVectorAgain { display: none; }
+#containerOtaComplete a { color: #e2b54a; text-decoration: underline; }
+.jos-tip { margin: 18px auto 0; max-width: 34em; color: #b9b3a3; font-size: 14px; text-align: center; }
+.jos-tip b { color: #e2b54a; }
+/* welcome + credits screens */
+.jos-overlay { position: fixed; inset: 0; z-index: 50; background: #000; display: flex; align-items: center; justify-content: center; padding: 24px 16px; overflow-y: auto; }
+.jos-hidden { display: none !important; }
+.jos-card { max-width: 560px; width: 100%; color: #eee; text-align: left; }
+.jos-card h1 { font-size: 34px; font-weight: 700; color: #e2b54a; margin: 6px 0 4px; letter-spacing: .02em; }
+.jos-logo { width: 72px; height: 72px; }
+.jos-lead { color: #cfc9b8; margin: 0 0 18px; }
+.jos-list, .jos-need { list-style: none; padding: 0; margin: 0 0 16px; display: grid; gap: 8px; }
+.jos-list li { padding-left: 14px; border-left: 2px solid #e2b54a; color: #ccc; }
+.jos-list b { display: block; color: #fff; }
+.jos-need-title { margin: 8px 0 6px; font-weight: 700; color: #fff; }
+.jos-need li { color: #ccc; padding-left: 14px; position: relative; }
+.jos-need li::before { content: ""; position: absolute; left: 0; top: .6em; width: 6px; height: 6px; border-radius: 50%; background: #e2b54a; }
+.jos-actions { display: flex; gap: 18px; align-items: center; margin-top: 18px; flex-wrap: wrap; }
+.jos-link { background: none; border: 0; color: #e2b54a; text-decoration: underline; cursor: pointer; font: inherit; padding: 0; }
+.jos-credits { display: grid; grid-template-columns: max-content 1fr; gap: 8px 16px; margin: 0; }
+.jos-credits dt { color: #e2b54a; font-weight: 700; }
+.jos-credits dd { margin: 0; color: #ccc; }
+.jos-credits a { color: #e2b54a; }
+@media (max-width: 560px) { .jos-credits { grid-template-columns: 1fr; } .jos-credits dd { margin-bottom: 6px; } }
