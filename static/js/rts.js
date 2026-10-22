@@ -1123,6 +1123,7 @@ function connectToWifi(ssid, pw, auth) {
     if (msg.value.wifiState == 2 || msg.value.wifiState == 1) {
       $("#wifiConnectErrorLabel").addClass("vec-hidden");
       toggleIcon("iconWifi", true);
+      if (window.JAMESOS_WIFI_ONLY) { window.jamesWifiDone(ssid); return; }  // JamesOS
       setupOTAFiles();
     } else {
       // wifi failed
@@ -1633,7 +1634,7 @@ function HandleHandshake(version) {
         return;
       }
 
-      if (m.value.wifiState == 1 || m.value.wifiState == 2) {
+      if (!window.JAMESOS_WIFI_ONLY && (m.value.wifiState == 1 || m.value.wifiState == 2)) {  // JamesOS
         toggleIcon("iconWifi", true);
         // skip wifi scan
         setupOTAFiles();
