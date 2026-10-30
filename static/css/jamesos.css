@@ -26,10 +26,10 @@ a { color: var(--jos-gold); }
   border-radius: 999px !important; height: 50px !important; min-width: 240px; font-weight: 600; text-transform: none !important;
   font-size: 16px; cursor: pointer; }
 .vec-btn:hover, .vec-field[type="button"]:hover { filter: brightness(1.06); color: var(--jos-ink) !important; border: 0 !important; }
-.vec-field { background: var(--jos-panel) !important; border: 1px solid var(--jos-edge) !important; border-radius: 14px !important;
+.vec-field:not(#txtPin) { background: var(--jos-panel) !important; border: 1px solid var(--jos-edge) !important; border-radius: 14px !important;
   height: 50px !important; color: var(--jos-text) !important; }
-.vec-field:focus { border-color: var(--jos-gold) !important; color: var(--jos-text) !important; }
-#txtPin { font-size: 22px; letter-spacing: .3em; text-align: center; }
+.vec-field:not(#txtPin):focus { border-color: var(--jos-gold) !important; color: var(--jos-text) !important; }
+#txtPin:focus-visible { outline: none; }   /* the PIN box keeps Vector Web Setup's original look */
 
 /* tip under PAIR WITH VECTOR */
 .jos-tip { margin: 20px auto 0; max-width: 34em; color: var(--jos-muted); font-size: 14px; text-align: center; line-height: 1.5; }
