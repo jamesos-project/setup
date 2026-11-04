@@ -16,7 +16,7 @@ body {
 }
 
 a {
-  color: #F2B544;
+  color: #F5F5F7;
 }
 
 a:visited {
@@ -28,7 +28,7 @@ a:visited {
 }
 
 .vec-table::-webkit-scrollbar-thumb {
-  background: #F2B544;
+  background: #F5F5F7;
   border-radius: 10px;
 }
 
@@ -159,7 +159,7 @@ select.vec-field {
   height: 34px;
   width: 34px;
   border-radius: 100%;
-  background: -webkit-linear-gradient(left top, #F2B544 9%, #000 45%);
+  background: -webkit-linear-gradient(left top, #F5F5F7 9%, #000 45%);
   padding: 2px;
   animation-name: vec-spinner-anim;
   animation-duration: 1s;
@@ -258,8 +258,8 @@ select.vec-field {
 }
 
 .vec-field:focus {
-  border: 2px solid #F2B544;
-  color: #F2B544;
+  border: 2px solid #F5F5F7;
+  color: #F5F5F7;
 }
 
 .vec-progress-bar {
@@ -278,7 +278,7 @@ select.vec-field {
   box-sizing: border-box;
   position: absolute;
   border-radius: 20px;
-  background-color: #F2B544;
+  background-color: #F5F5F7;
   margin: 5px;
 }
 
@@ -317,7 +317,7 @@ select.vec-field {
   box-sizing: border-box;
   position: absolute;
   border-radius: 4px;
-  background-color: #F2B544;
+  background-color: #F5F5F7;
   margin: 4px;
 }
 
@@ -341,8 +341,8 @@ select.vec-field {
 }
 
 .vec-btn:hover {
-  border: 2px solid #F2B544;
-  color: #F2B544;
+  border: 2px solid #F5F5F7;
+  color: #F5F5F7;
 }
 
 .vec-wifi-row {
@@ -364,9 +364,9 @@ select.vec-field {
 
 .vec-wifi-row:hover,
 .vec-ota-row:hover {
-  color: #F2B544;
-  border-top: 1px solid #F2B544;
-  border-bottom: 1px solid #F2B544;
+  color: #F5F5F7;
+  border-top: 1px solid #F5F5F7;
+  border-bottom: 1px solid #F5F5F7;
 }
 
 .vec-ota-row {
@@ -410,7 +410,7 @@ div.vec-link {
 }
 
 .vec-link:hover {
-  color: #F2B544;
+  color: #F5F5F7;
 }
 
 .vec-error {
@@ -434,7 +434,7 @@ div.vec-link {
   min-width: 120px;
   height: auto;
   border-radius: 20px;
-  border: 2px solid #F2B544;
+  border: 2px solid #F5F5F7;
   padding: 5px 20px;
   background-color: #000;
   margin: 3px 0px;
@@ -451,7 +451,7 @@ div.vec-link {
 }
 
 .vec-info-title {
-  color: #F2B544;
+  color: #F5F5F7;
   text-align: center;
   margin-bottom: 5px;
   font-weight: 700;
@@ -478,7 +478,7 @@ div.vec-link {
 }
 
 .vec-link:hover {
-  color: #F2B544;
+  color: #F5F5F7;
 }
 
 .vec-panel {

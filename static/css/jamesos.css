@@ -1,16 +1,16 @@
 /* JamesOS Setup - graphite and gold, like the JamesOS phone page */
-@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600&display=swap");
-:root { --jos-bg:#16181B; --jos-panel:#202327; --jos-raised:#2A2E33; --jos-edge:#30343A;
-  --jos-text:#F3F1EC; --jos-muted:#A3A49F; --jos-faint:#74777A; --jos-gold:#F2B544; --jos-ink:#2B1A00; --jos-tint:rgba(242,181,68,.14); }
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+:root { --jos-bg:#000000; --jos-panel:#1D1D1F; --jos-raised:#2C2C2E; --jos-edge:#2C2C2E;
+  --jos-text:#F5F5F7; --jos-muted:#A1A1A6; --jos-faint:#6E6E73; --jos-gold:#F5F5F7; --jos-ink:#000000; --jos-tint:rgba(255,255,255,.10); }
 body, .vec-panel-container { background: var(--jos-bg) !important; color: var(--jos-text);
-  font-family: Rubik, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif !important; -webkit-font-smoothing: antialiased; }
+  font-family: Inter, -apple-system, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif !important; -webkit-font-smoothing: antialiased; }
 a { color: var(--jos-gold); }
 :focus-visible { outline: 2px solid var(--jos-gold); outline-offset: 3px; }
 
 /* status icons at the top: small and quiet, gold when a step is done */
 .vec-status { gap: 6px; padding-top: 16px; }
 .vec-icon { width: 22px; margin: 4px 10px; }
-.vec-icon-done { filter: opacity(100%) brightness(0) saturate(100%) invert(76%) sepia(43%) saturate(708%) hue-rotate(358deg) brightness(97%) contrast(92%); }
+.vec-icon-done { filter: brightness(0) invert(1); }
 .vec-info-box { border: 1px solid var(--jos-edge) !important; background: var(--jos-panel) !important; border-radius: 999px; font-size: 13px; }
 
 /* the steps */
@@ -102,4 +102,85 @@ a { color: var(--jos-gold); }
   .jos-features { grid-template-columns: 1fr; gap: 18px; margin-top: 36px; }
   .jos-credits > div { grid-template-columns: 1fr; gap: 4px; }
   .vec-instruction { padding: 16px; }
+}
+
+/* JamesOS black and white: the welcome page, one big idea per screen */
+#jamesWelcome.jx { display: block; padding: 0; scroll-behavior: smooth; }
+#jamesWelcome.jos-hidden { display: none !important; }
+.jx-nav { position: sticky; top: 0; z-index: 2; display: flex; align-items: center; gap: 28px; height: 52px; padding: 0 28px;
+  font-size: 13px; transition: background .3s ease; }
+.jx-scrolled .jx-nav { background: rgba(0,0,0,.72); -webkit-backdrop-filter: saturate(180%) blur(20px); backdrop-filter: saturate(180%) blur(20px); }
+.jx-brand { display: flex; align-items: center; gap: 8px; font-weight: 600; font-size: 15px; color: var(--jos-text); }
+.jx-mark { width: 22px; height: 22px; }
+.jx-links { flex: 1; display: flex; justify-content: center; gap: 28px; }
+.jx-links a { color: var(--jos-muted); text-decoration: none; }
+.jx-links a:hover { color: var(--jos-text); }
+.jx-pill { height: 30px; padding: 0 16px; border: 0; border-radius: 15px; background: var(--jos-text); color: #000; font: inherit; font-weight: 500; cursor: pointer; }
+.jx-hero { min-height: calc(100vh - 52px); display: flex; flex-direction: column; align-items: center; justify-content: center;
+  text-align: center; padding: 40px 24px 60px; }
+.jx-hero h1 { margin: 0 0 14px; font-size: clamp(48px, 9vw, 104px); line-height: 1.02; font-weight: 700; letter-spacing: -.035em; color: var(--jos-text); }
+.jx-sub { margin: 0 0 30px; font-size: clamp(19px, 2.4vw, 26px); color: var(--jos-muted); }
+.jx-actions { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+.jx-btn { display: inline-flex; align-items: center; justify-content: center; min-width: 150px; height: 48px; padding: 0 28px; border: 0; border-radius: 24px;
+  background: var(--jos-text); color: #000; font: inherit; font-size: 17px; font-weight: 500; text-decoration: none; cursor: pointer;
+  transition: transform .15s ease, opacity .15s ease; }
+.jx-btn:hover { opacity: .88; }
+.jx-btn:active { transform: scale(.97); }
+.jx-quiet { background: var(--jos-panel); color: var(--jos-text); }
+.jx-dark { background: #000; color: #F5F5F7; }
+.jx-tiny { margin: 22px 0 0; font-size: 14px; color: var(--jos-faint); }
+.jx-textbtn { background: none; border: 0; padding: 0; color: var(--jos-muted); font: inherit; text-decoration: underline; cursor: pointer; }
+.jx-photo { display: block; width: min(980px, 100%); margin: 48px auto 0; border-radius: 28px; object-fit: cover; max-height: 60vh; }
+.jx-sec { padding: 120px 24px; text-align: center; }
+.jx-sec h2 { margin: 0 0 14px; font-size: clamp(38px, 6vw, 64px); line-height: 1.05; font-weight: 700; letter-spacing: -.03em; color: var(--jos-text); }
+.jx-sec > p { margin: 0 auto 20px; max-width: 30em; font-size: clamp(17px, 2vw, 21px); line-height: 1.45; color: var(--jos-muted); }
+.jx-more { color: #2BD9C8; font-size: 19px; text-decoration: none; }
+.jx-more::after { content: " ›"; }
+.jx-more:hover { text-decoration: underline; }
+.jx-light { background: #F5F5F7; }
+.jx-light h2 { color: #1D1D1F; }
+.jx-light > p { color: #6E6E73; }
+.jx-nums { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; max-width: 760px; margin: 56px auto 0; }
+.jx-nums b { display: block; font-size: clamp(36px, 5vw, 56px); font-weight: 700; letter-spacing: -.03em; color: #1D1D1F; }
+.jx-nums span { font-size: 15px; color: #6E6E73; }
+.jx-grid { list-style: none; padding: 0; margin: 48px auto 0; max-width: 1000px; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; text-align: left; }
+.jx-grid li { background: var(--jos-panel); border-radius: 22px; padding: 22px; transition: transform .2s ease; }
+.jx-grid li:hover { transform: translateY(-3px); }
+.jx-grid b { display: block; font-size: 17px; font-weight: 600; margin-bottom: 6px; color: var(--jos-text); }
+.jx-grid span { font-size: 14px; line-height: 1.45; color: var(--jos-muted); }
+.jx-steps { list-style: none; padding: 0; margin: 48px auto 0; max-width: 900px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px;
+  counter-reset: st; text-align: left; }
+.jx-steps li { counter-increment: st; background: #fff; border-radius: 22px; padding: 24px; }
+.jx-steps li::before { content: counter(st); display: flex; align-items: center; justify-content: center; width: 30px; height: 30px; margin-bottom: 14px;
+  border-radius: 50%; background: #1D1D1F; color: #fff; font-weight: 600; font-size: 14px; }
+.jx-steps b { display: block; font-size: 17px; font-weight: 600; color: #1D1D1F; margin-bottom: 4px; }
+.jx-steps span { font-size: 14px; line-height: 1.45; color: #6E6E73; }
+.jx-new { max-width: 720px; margin: 12px auto 0; background: var(--jos-panel); border-radius: 18px; text-align: left; }
+.jx-new summary { padding: 18px 22px; font-size: 17px; font-weight: 600; color: var(--jos-text); cursor: pointer; list-style: none; display: flex; justify-content: space-between; }
+.jx-new summary::-webkit-details-marker { display: none; }
+.jx-new summary::after { content: "+"; color: var(--jos-muted); font-weight: 400; font-size: 22px; line-height: 1; }
+.jx-new[open] summary::after { content: "−"; }
+.jx-new ul { margin: 0; padding: 0 22px 20px 40px; color: var(--jos-muted); font-size: 15px; line-height: 1.65; }
+.jx-end .jx-btn { margin-top: 10px; }
+.jx-foot { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; padding: 22px 28px 32px; border-top: 1px solid var(--jos-edge);
+  font-size: 12px; color: var(--jos-faint); }
+.jx-foot a { color: var(--jos-muted); text-decoration: none; }
+.jx-foot a:hover { text-decoration: underline; }
+.jx-reveal { opacity: 0; transform: translateY(28px); transition: opacity .8s ease, transform .8s ease; }
+.jx-reveal.jx-in { opacity: 1; transform: none; }
+@media (max-width: 860px) {
+  .jx-links { display: none; }
+  .jx-nav { justify-content: space-between; padding: 0 20px; }
+  .jx-grid { grid-template-columns: 1fr 1fr; }
+  .jx-steps { grid-template-columns: 1fr; }
+  .jx-sec { padding: 88px 20px; }
+}
+@media (max-width: 520px) {
+  .jx-grid { grid-template-columns: 1fr; }
+  .jx-nums { grid-template-columns: 1fr; gap: 28px; }
+  .jx-actions .jx-btn { width: 100%; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .jx-reveal { opacity: 1; transform: none; transition: none; }
+  #jamesWelcome.jx { scroll-behavior: auto; }
 }
